@@ -1,0 +1,92 @@
+swagger: "2.0"
+info:
+  description: "<font size=\"2\" color=\"red\">Licença</font>"
+  version: "1.0.3"
+  title: "Tracking Api"
+  license:
+    name: "Erlan Lucio"
+    url: "https://github.com/lucioerlan"
+host: "localhost:4001"
+basePath: "/api" 
+schemes:
+- "http"
+paths:
+
+  /user/{cpf}:
+    get:
+      tags:
+      - "ROUTES CHATBOT"
+      summary: "Get user by cpf"
+      description: "Get a user, passing the cpf as a parameter."
+      operationId: "getusers/cpf"
+      produces:
+      - "application/xml"
+      - "application/json"
+      parameters:
+      - name: "cpf"
+        in: "path"
+        description: "the cpf that needs to be fetched. "
+        required: true
+        type: "string"
+      responses:
+        200:
+          description: "successful operation"
+          schema:
+            $ref: "#/definitions/user"
+        400:
+          description: "Invalid id supplied"
+        404:
+          description: "user not found"
+
+
+  /order-user/{cpf}/{purchase_code}:
+    get:
+      tags:
+      - "ROUTES CHATBOT"
+      summary: "Get purchase_code"
+      description: "Get a purchase code, passing the cpf and purchase code as a parameter."
+      operationId: "user/cpf/purchase_code"
+      produces:
+      - "application/xml"
+      - "application/json"
+      parameters:
+      - name: "cpf"
+        in: "path"
+        description: "the cpf that needs to be fetched. "
+        required: true
+        type: "string"
+      - name: "purchase_code"
+        in: "path"
+        description: "the purchase code that needs to be fetched. "
+        required: true
+        type: "string"
+      responses:
+        200:
+          description: "successful operation"
+          schema:
+            $ref: "#/definitions/orderuser"
+        400:
+          description: "Invalid id supplied"
+        404:
+          description: "purchase code not found"
+
+ 
+definitions:
+  user:
+    type: "object"
+    required:
+    - "cpf"
+    properties:
+      cpf:
+        type: "string"
+
+  orderuser:
+    type: "object"
+    required:
+    - "cpf"
+    - "purchase_code"
+    properties:
+      cpf:
+        type: "string"
+      purchase_code:
+        type: "string"

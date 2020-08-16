@@ -1,0 +1,20 @@
+version: '2'
+services:
+  server:
+    build:
+      context: ./api/
+    command: /usr/app/node_modules/.bin/node server.js
+    volumes:
+      - ./api/:/usr/app
+      - /usr/app/node_modules
+    ports:
+      - "4001:4001"
+  service:
+    build:
+      context: ./service/
+    command: npm start
+    volumes:
+      - ./service/:/usr/app
+      - /usr/app/node_modules
+    depends_on:
+      - server
