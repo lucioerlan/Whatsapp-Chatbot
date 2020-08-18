@@ -9,7 +9,9 @@
 
 This service communicates with whatsapp web, using the puppeteer. This bot is inspired by 99% of the bots I see out there on the internet, from e-commerces
 
- Credits to the author of the library [PEDRO](https://github.com/pedroslopez)
+ Credits to the author of the library [PEDRO](https://github.com/pedroslopez)  
+ <br>
+Special thanks for the structure [CAIO](https://github.com/caioagiani)
 <br><br>
 
 
