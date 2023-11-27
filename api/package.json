@@ -21,11 +21,11 @@
     "ip": "^1.1.5",
     "js-yaml": "^3.3.0",
     "keygrip": "^1.1.0",
-    "knex": "^0.21.3",
+    "knex": "^0.95.0",
     "morgan": "^1.9.1",
     "pg": "^8.3.0",
     "postgres": "^1.0.2",
-    "swagger-tools": "0.10.1"
+    "swagger-tools": "0.10.4"
   },
   "devDependencies": {
     "eslint": "^6.8.0",
