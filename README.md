@@ -99,19 +99,19 @@ Best way to install is to clone it from Github
 **To clone/download the boilerplate**
 
 ```bash
-$ git clone https://github.com/lucioerlan/rest-to-soap.git
+$ git clone https://github.com/lucioerlan/Whatsapp-Chatbot.git
 ```
 
 **After cloning**
 
 ```bash
-$ cd rest-to-soap
+$ cd Whatsapp-Chatbot.git
 ```
 
 **Install all of the projects dependencies with:**
 
 ```bash
-$ npm install
+$ npm install api and service
 
 ```
 
